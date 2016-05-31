@@ -1,0 +1,11 @@
+<h1>Tasks#show</h1>
+
+<h2> task: <%= @tasks.name %></h2>
+<p> status:
+<% if @tasks.status %></p>
+  <%= "done" %>
+  <% else %>
+  <%= "not done" %>
+  <% end %>
+<br>
+<%= link_to('back to index', 'http://localhost:3000/') %>

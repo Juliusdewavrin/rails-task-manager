@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'faker'
+
+# # Creating 100 fake restaurants
+# 10.times do
+#   task = Task.new({
+#     name: Faker::Company.name,
+#     status: "true",
+#   })
+#   task.save
+# end

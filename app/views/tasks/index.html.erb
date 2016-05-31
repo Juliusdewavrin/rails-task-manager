@@ -1,0 +1,24 @@
+<h1>Tasks#index</h1>
+<p>--------------------------------------------------------</p>
+<p><%= link_to("Create new task", "http://localhost:3000/tasks/new") %></p>
+<p>--------------------------------------------------------</p>
+
+
+<% @tasks.each do |task| %>
+  <h2><%= link_to("#{task.name}", "http://localhost:3000/tasks/"+"#{task.id}") %></h2>
+
+  <p> status:  <% if task.status %>
+    <%= "done" %>
+    <% else %>
+    <%= "not done" %>
+    <% end %>
+    </p>
+
+  <p><%= link_to("Edit", "http://localhost:3000/tasks/"+"#{task.id}"+"/edit") %></p>
+  <p>
+    <%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    </p>
+  <p>--------------------------------------------------------</p>
+<% end %>
